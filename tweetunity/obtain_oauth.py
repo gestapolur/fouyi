@@ -1,7 +1,7 @@
 """
 twitter API oauth unities
-date : 2013-05-29
-author : Gestalt Lur
+@date : 2013-05-29
+@author : Gestalt Lur
 """
 import httplib
 import urllib
@@ -129,6 +129,7 @@ def obtain_bearer_token( consumer_key, consumer_secret ):
     twitter_conn.close()
 
     return respond_body_dict['access_token']
+ 
 
 def get_nonce():
     s = ""

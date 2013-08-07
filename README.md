@@ -8,7 +8,7 @@ FEATURES
 
         Input a tweet ID or tweet URL, crawl it's retweet & reply and show it in frontend.
     
-CONFIGURE & DEPOLY
+CONFIGURE & DEPLOY
 ------------------
   
   * put oauth keys in /tweetunity/oauth_keys.txt

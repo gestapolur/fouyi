@@ -1,12 +1,22 @@
+# -*- coding: utf-8 -*-
 """
 some implement of twitter timeline api
-Gestalt Lur
-2013-05-29
+
+@author : Gestalt Lur
+
+@date : 2013-08-07
+
+@todo : urllib and httplib should be replaced by requests
+
+@todo : change function module to class, so that could keep session
 """
+
 import httplib
 import urllib
 import os
 import logging
+
+import requests
 
 from obtain_oauth import get_access_token
 from obtain_oauth import get_oauth_header 
@@ -197,3 +207,24 @@ def get_user(user_id=None, user_name=None ):
     connect.close()
 
     return user_entites[ 0 ] # only return user
+
+
+def get_tweet_by_id( tweet_id ):
+    """
+    https://api.twitter.com/1.1/statuses/show.json 
+    
+    Returns a single Tweet, specified by the id parameter.
+
+    The Tweet's author will also be embedded within the tweet.
+    """
+    host = 'api.twitter.com'
+    url = '/1.1/statuses/show.json'
+    opt = 'id=' + str(tweet_id)
+    s = requests.session()
+    s.get(
+        'https://' + host + url + '?' + opt,
+        auth=get_oauth_header( "GET", host, url, opt))
+
+
+if __name__ == '__main__':
+    get_tweet_by_id(364966393675907073)
