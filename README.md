@@ -1,4 +1,4 @@
-fouyi(Æ]Æq)
+fouyi(èŠ£è‹¢)
 ================
 
         A zh tweets spider that analyze single tweet's retweet & reply routeline 
