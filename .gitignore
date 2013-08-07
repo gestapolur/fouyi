@@ -1,0 +1,13 @@
+*.txt
+*.pyc
+*~
+*.*~
+
+stylesheets/*.*~
+
+tweetunity/*.pyc
+tweetunity/*.txt
+tweetunity/*.*~
+
+test.py
+
